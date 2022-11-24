@@ -15,7 +15,7 @@ const setupInput = function (conn) {
 
 const handleUserInput = function (key) {
   // your code here
-  
+
   if (key === '\u0003') {
     process.exit();
   }
@@ -35,7 +35,9 @@ const handleUserInput = function (key) {
     // console.log('d was pressed');
     connection.write('Move: right');
   }
-
+  if (key === '`') {
+    connection.write('Say: Hello!');
+  }
 };
 
 module.exports = setupInput;
